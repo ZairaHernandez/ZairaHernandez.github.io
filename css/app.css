@@ -1,0 +1,193 @@
+body {
+  margin: 0;
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .header {
+    background-attachment: scroll;
+  }
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../img/header.jpg);
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /*parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+#titulo-principal {
+  font-family: "Roboto Slab", serif;
+  color: white;
+  font-size: 36px;
+  font-weight: normal;
+  width: 780px;
+  text-align: center;
+}
+
+#informacionPersonal {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+#informacionPersonal-foto {
+  background-image: url('../img/estj.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  border: 1px solid white;
+}
+
+.checked {
+  color: orange;
+}
+#informacionPersonal-texto {
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  color: rgb(51, 51, 51);
+  line-height: 24px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e6e6e6;
+
+}
+
+
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+#listicle-body {
+  width: 66.67%;
+  position: relative;
+}
+
+.recomendacion-header {
+  font-family: "Roboto Slab", serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: rgb(51, 51, 51);
+}
+
+.pie-recomendacion {
+  height: 20px;
+}
+
+.recomendacion-numero-contenedor {
+  position: absolute;
+  right: 100%;
+}
+
+.recomendacion-numero {
+  position: absolute;
+  right: 40px;
+  font-family: "Roboto Slab", serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.25);
+
+}
+
+.recomendacion-text {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  color: rgb(51, 51, 51);
+  margin: 0px;
+}
+
+
+.recomendacion {
+  padding: 60px 0px;
+}
+
+a {
+  color: #42b4d6;
+  text-decoration: none;
+  font-weight: normal;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  width: 100%;
+  max-height: 1000px;
+
+}
+
+
+.autor {
+  font-family: "Roboto Slab", serif;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(51, 51, 51);
+  padding: 0px 0px 30px 0px;
+  
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin: 0 auto;
+  padding:  0px 0px 60px 0px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
